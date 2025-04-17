@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ENG1L Report Card Comment Generator</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+max-width: 800px;
+margin: auto;
+padding: 20px;
+}
+select, input {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+font-size: 1rem;
+}
+select optgroup[label="Reading"],
+select optgroup[label="Reading & Comprehension"] { color: #007BFF; }
+select optgroup[label="Writing"],
+select optgroup[label="Writing Skills"] { color: #800080; }
+select optgroup[label="Oral Communication"],
+select optgroup[label="Oral & Media Literacy"] { color: #009688; }
+select optgroup[label="Media Literacy"] { color: #FF8C00; }
+select optgroup[label="Focus & Engagement"],
+select optgroup[label="Organization & Submission"],
+select optgroup[label="Work Habits & Organization"] { color: #DC3545; }
+select optgroup[label="Independence & Participation"] { color: #28A745; }
+.output {
+margin-top: 20px;
+padding: 15px;
+background-color: #f0f0f0;
+border: 1px solid #ccc;
+}
+</style>
+</head>
+<body>
+
+<h2>ENG1L Report Card Comment Generator</h2>
+
+<label for="studentName">Student First Name:</label>
+<input type="text" id="studentName" placeholder="e.g. Jordan" />
+
+<label for="pronouns">Preferred Pronouns:</label>
+<select id="pronouns">
+<option value="">-- Select pronouns --</option>
+<option value="he/him">He/Him</option>
+<option value="she/her">She/Her</option>
+<option value="they/their">They/Their</option>
+</select>
+
+<label for="assignment">Assignment Reference:</label>
+<select id="assignment">
+<option value="">-- Select an assignment --</option>
+<option value="the independent novel study project">the independent novel study project</option>
+<option value="the personal opinion writing task">the personal opinion writing task</option>
+<option value="the media analysis assignment">the media analysis assignment</option>
+<option value="the paragraph writing activity">the paragraph writing activity</option>
+<option value="the short story response">the short story response</option>
+<option value="the oral presentation">the oral presentation</option>
+<option value="the reading conference reflection">the reading conference reflection</option>
+<option value="the visual response project">the visual response project</option>
+<option value="the current events reading task">the current events reading task</option>
+<option value="the character analysis activity">the character analysis activity</option>
+<option value="the comic strip story assignment">the comic strip story assignment</option>
+<option value="the graphic novel illustration assignment">the graphic novel illustration assignment</option>
+<option value="the Last Ten Seconds graphic novel assignment">the Last Ten Seconds graphic novel assignment</option>
+<option value="the Big Change written response assignment">the Big Change written response assignment</option>
+<option value="the Metamorphosis comprehension response assignment">the Metamorphosis comprehension response assignment</option>
+<option value="the Pleasantville creative assignment">the Pleasantville creative assignment</option>
+</select>
+
+<label for="strength">Student Strength:</label>
+<select id="strength">
+<option value="">-- Select a strength --</option>
+<optgroup label="Reading">
+<option value="demonstrates growing confidence when reading aloud">Demonstrates growing confidence when reading aloud</option>
+<option value="makes meaningful personal connections to reading texts">Makes meaningful personal connections to reading texts</option>
+<option value="identifies main ideas and supporting details effectively">Identifies main ideas and supporting details effectively</option>
+<option value="reads with improved fluency and expression">Reads with improved fluency and expression</option>
+<option value="uses context clues to understand unfamiliar vocabulary">Uses context clues to understand unfamiliar vocabulary</option>
+</optgroup>
+<optgroup label="Writing">
+<option value="organizes written work using a clear beginning, middle, and end">Organizes written work using a clear beginning, middle, and end</option>
+<option value="develops ideas with supporting evidence in writing tasks">Develops ideas with supporting evidence in writing tasks</option>
+<option value="applies feedback to improve grammar and sentence structure">Applies feedback to improve grammar and sentence structure</option>
+<option value="writes personal responses that show insight and reflection">Writes personal responses that show insight and reflection</option>
+<option value="uses graphic organizers effectively to plan written work">Uses graphic organizers effectively to plan written work</option>
+</optgroup>
+<optgroup label="Oral Communication">
+<option value="participates respectfully in classroom discussions">Participates respectfully in classroom discussions</option>
+<option value="shares ideas clearly during group and partner work">Shares ideas clearly during group and partner work</option>
+<option value="uses appropriate tone and volume when presenting">Uses appropriate tone and volume when presenting</option>
+<option value="asks relevant questions to clarify understanding">Asks relevant questions to clarify understanding</option>
+<option value="listens actively and offers thoughtful feedback">Listens actively and offers thoughtful feedback</option>
+</optgroup>
+<optgroup label="Media Literacy">
+<option value="analyzes media texts for message and purpose">Analyzes media texts for message and purpose</option>
+<option value="identifies how media influences opinions and decisions">Identifies how media influences opinions and decisions</option>
+<option value="compares media formats effectively during analysis">Compares media formats effectively during analysis</option>
+<option value="creates media products that reflect understanding of audience">Creates media products that reflect understanding of audience</option>
+<option value="expresses ideas creatively using media tools">Expresses ideas creatively using media tools</option>
+</optgroup>
+</select>
+
+<label for="need">Area of Need:</label>
+<select id="need">
+<option value="">-- Select an area of need --</option>
+<!-- Focus & Engagement -->
+<optgroup label="Focus & Engagement">
+<option value="needs to remain on task more consistently during reading and writing activities.">Needs to remain on task more consistently during reading and writing activities.</option>
+<option value="requires reminders to focus during independent work.">Requires reminders to focus during independent work.</option>
+<option value="benefits from one-on-one support to stay engaged in lessons.">Benefits from one-on-one support to stay engaged in lessons.</option>
+<option value="has difficulty following multi-step instructions without clarification.">Has difficulty following multi-step instructions without clarification.</option>
+<option value="is working on transitioning between tasks more independently.">Is working on transitioning between tasks more independently.</option>
+</optgroup>
+<!-- Organization & Submission -->
+<optgroup label="Organization & Submission">
+<option value="needs support with organizing written responses and formatting.">Needs support with organizing written responses and formatting.</option>
+<option value="frequently needs reminders to submit assignments on time.">Frequently needs reminders to submit assignments on time.</option>
+<option value="is developing time management skills for longer tasks.">Is developing time management skills for longer tasks.</option>
+<option value="sometimes forgets to bring necessary materials to class.">Sometimes forgets to bring necessary materials to class.</option>
+<option value="benefits from using visual organizers and writing templates.">Benefits from using visual organizers and writing templates.</option>
+</optgroup>
+<!-- Reading & Writing Development -->
+<optgroup label="Reading & Writing Development">
+<option value="is working on reading comprehension strategies to understand longer texts.">Is working on reading comprehension strategies to understand longer texts.</option>
+<option value="needs support to expand ideas when writing responses.">Needs support to expand ideas when writing responses.</option>
+<option value="requires reminders to revise and edit written work before submission.">Requires reminders to revise and edit written work before submission.</option>
+<option value="is developing fluency and confidence when reading aloud.">Is developing fluency and confidence when reading aloud.</option>
+<option value="is working on spelling and grammar consistency.">Is working on spelling and grammar consistency.</option>
+</optgroup>
+<!-- Independence & Participation -->
+<optgroup label="Independence & Participation">
+<option value="is learning to participate more consistently in group discussions.">Is learning to participate more consistently in group discussions.</option>
+<option value="often waits for teacher support before beginning tasks.">Often waits for teacher support before beginning tasks.</option>
+<option value="is encouraged to ask for clarification when needed.">Is encouraged to ask for clarification when needed.</option>
+<option value="benefits from positive reinforcement to build classroom confidence.">Benefits from positive reinforcement to build classroom confidence.</option>
+<option value="needs encouragement to attempt tasks before seeking help.">Needs encouragement to attempt tasks before seeking help.</option>
+</optgroup>
+</select>
+
+<label for="nextStep">Next Step:</label>
+<select id="nextStep">
+<option value="">-- Select a next step --</option>
+<optgroup label="Reading & Comprehension">
+<option value="is encouraged to read a variety of texts to build confidence with unfamiliar material.">Is encouraged to read a variety of texts to build confidence with unfamiliar material.</option>
+<option value="should continue building decoding and comprehension skills through guided reading.">Should continue building decoding and comprehension skills through guided reading.</option>
+</optgroup>
+<optgroup label="Writing Skills">
+<option value="should focus on organizing writing using clear topic sentences and supporting ideas.">Should focus on organizing writing using clear topic sentences and supporting ideas.</option>
+<option value="is encouraged to practice editing written work to improve clarity and grammar.">Is encouraged to practice editing written work to improve clarity and grammar.</option>
+<option value="would benefit from modeling and structured supports to develop paragraph structure.">Would benefit from modeling and structured supports to develop paragraph structure.</option>
+</optgroup>
+<optgroup label="Oral & Media Literacy">
+<option value="is encouraged to participate in discussions to build confidence and verbal expression.">Is encouraged to participate in discussions to build confidence and verbal expression.</option>
+<option value="should continue practicing oral presentations to develop communication skills.">Should continue practicing oral presentations to develop communication skills.</option>
+</optgroup>
+<optgroup label="Work Habits & Organization">
+<option value="would benefit from using checklists to plan and complete tasks more independently.">Would benefit from using checklists to plan and complete tasks more independently.</option>
+<option value="should continue developing time management strategies to meet deadlines.">Should continue developing time management strategies to meet deadlines.</option>
+<option value="is encouraged to ask for clarification when unsure of expectations.">Is encouraged to ask for clarification when unsure of expectations.</option>
+</optgroup>
+</select>
+
+<label for="closing">Closing Statement:</label>
+<select id="closing">
+<option value="">-- Select a closing statement --</option>
+<option value="Best of luck in all of your future endeavors.">Best of luck in all of your future endeavors.</option>
+<option value="Wishing you continued growth in your learning journey.">Wishing you continued growth in your learning journey.</option>
+<option value="Looking forward to seeing your confidence continue to grow.">Looking forward to seeing your confidence continue to grow.</option>
+<option value="Great work this term—keep it going!">Great work this term—keep it going!</option>
+</select>
+
+<div class="output">
+<h3>Generated Comment:</h3>
+<p id="commentPreview">Your final comment will appear here.</p>
+</div>
+
+<script>
+function generateComment() {
+const name = document.getElementById("studentName").value.trim();
+const pronouns = document.getElementById("pronouns").value.trim();
+const assignment = document.getElementById("assignment").value;
+const strength = document.getElementById("strength").value;
+const need = document.getElementById("need").value;
+const nextStep = document.getElementById("nextStep").value;
+const closing = document.getElementById("closing").value;
+const preview = document.getElementById("commentPreview");
+
+if (!name || !pronouns || !assignment || !strength || !need || !nextStep || !closing) {
+preview.textContent = "Please complete all selections to generate the comment.";
+return;
+}
+
+const [subjectPronoun] = pronouns.split("/") || ["they"];
+const capPronoun = subjectPronoun.charAt(0).toUpperCase() + subjectPronoun.slice(1);
+const capName = name.charAt(0).toUpperCase() + name.slice(1);
+
+const comment = `${capName} ${strength}, as demonstrated in ${assignment}. ${capPronoun} ${need.replace(/\.$/, "")}. ${capName} ${nextStep.replace(/\.$/, "")}. ${closing}`;
+preview.textContent = comment;
+}
+
+document.querySelectorAll('select, input').forEach(el => {
+el.addEventListener('change', generateComment);
+});
+</script>
+
+</body>
+</html>
